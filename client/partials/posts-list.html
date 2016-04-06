@@ -1,0 +1,15 @@
+<div ng-controller="postsListController">
+    <div>
+        Posts list: <a href="/#/addPost">Add new post</a>
+    </div>
+    <ul>
+        <li ng-repeat="post in posts">
+            <span>{{post.id}}</span>
+            <span>{{post.header}}</span>
+            <div ng-show="post.body">Body: {{post.body}}</div>
+            <a href=" " ng-click="deletePost(post.id)">delete</a>
+            <a href="/#/post/{{post.id}}">update</a>
+            <a href="" ng-click="showBody(post)">show body</a>
+        </li>
+    </ul>
+</div>
